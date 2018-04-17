@@ -9,13 +9,19 @@ export class JokeComponent implements OnInit {
 
 setup: string;
 punchline: string;
+hide:boolean;
 
-  constructor() { 
-    this.setup = "What did the cheese say when it looked in the mirror?";
-    this.punchline = "Halloumi (Hello Me)";
+  constructor(setup: string, punchline: string) { 
+    this.setup = setup;
+    this.punchline = punchline;
+    this.hide = true;
   }
 
   ngOnInit() {
   }
+
+toggle() {
+this.hide = !this.hide;
+}
 
 }
